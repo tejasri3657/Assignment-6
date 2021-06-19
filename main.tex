@@ -149,57 +149,33 @@ foci \myvec{\pm{3}\sqrt{5}\\0}
 \end{enumerate}
 %
 \section{Solution}
-Given
-
-Latus rectum length = 8 
+Let
 \begin{align}
-Foci&=\myvec{\pm3\sqrt{5}\\0} 
+  a = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}},
+  b = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2}}
+\end{align}
+\begin{align}
+Now, c^2 &=a^2-b^2 
 \\
-\Vec{c}&=3\sqrt{5}
+\implies 4s &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} 
+\end{align}
+And,length of latus rectum = 8
+\begin{align}
+\implies \frac{2b^2}{a} = 8
+\implies b^2 = 4a
+\\
+\implies \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} = 4\sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}} 
+\end{align}
+\begin{align}
+From (2.0.3) \And (2.0.5),Find \lambda_1,\lambda_2 \And {\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}
+\end{align}
+Final equation is :
+\begin{align}
+\frac{\vec{y}^{\top}Dy}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}=1\\
+\implies \frac{\vec{y}^{\top}\myvec{\lambda_1& 0 \\ 0 & \lambda_2}}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f} =1
 \end{align}
 
-since,foci on x-axis.
 
-Equation of ellipse can be written as
-\begin{align}
-\frac{x^2}{81} + \frac{y^2}{36} = 1
-\end{align}
-we know,
-\begin{align}
-c^2&=a^2-b^2
-\\
-(3\sqrt5)^2&=a^2-b^2
-\\
-\quad\therefore a^2-b^2&=45
-\end{align}
-Latus rectum length=8
-\begin{align}
-\frac{2(b^2)}{a} &= 8
- \\
- b^2&=4a
- \\
- a^2+4a&=45
- \\
- a^2-4a-45&=0
- \\
- (a-9)(a+5)&=0
- \\
- a = -5 (or) a = 9
-\end{align}
-Since, a is distance,it can't be negative.
-\begin{align}
-\quad\therefore\Vec{a}&=9 \\
-b^2&=4a=36 \\
-\implies b&=6
-\end{align}
-Now,
-\begin{align}
-\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
-\end{align}
-putting values,
-\begin{align}
-\frac{x^2}{81} + \frac{y^2}{36} = 1
-\end{align}
 Plot of ellipse:
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
