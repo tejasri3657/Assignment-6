@@ -1,3 +1,4 @@
+
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
@@ -141,7 +142,6 @@ https://github.com/tejasri3657/Assignment-6/new/main
 \end{lstlisting}
 %
 \section{Question No 2.74(f)}
-
 In each of the following find the equation for the ellipse that satisfies the given condition:
 \begin{enumerate}
 \item Latus rectum length 8,
@@ -149,6 +149,26 @@ foci \myvec{\pm{3}\sqrt{5}\\0}
 \end{enumerate}
 %
 \section{Solution}
+Given that,
+
+Latus rectum length = 8 
+\begin{align}
+foci &=\myvec{\pm{3}\sqrt{5}\\0}
+\end{align}
+\begin{lemma}
+The standard equation of a conic is given by:
+\begin{align}
+\frac{\vec{y}^{\top}D\vec{y}}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}&=1
+\\
+\text{where, } D &=\myvec{\lambda_1& 0 \\ 0 & \lambda_2}
+\end{align}
+\end{lemma}
+\begin{lemma}
+focus of a conic is given by
+\begin{align}
+ \vec{F} &=\sqrt{\frac{ (\vec{u}^{\top} \vec{V}^{-1} \vec{u} - f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}
+ \end{align}
+\end{lemma}
 Let
 \begin{align}
   a = \sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}},
@@ -159,10 +179,15 @@ Now, c^2 &=a^2-b^2
 \\
 \implies 45 &= \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}-\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} 
 \end{align}
-And,length of latus rectum = 8
+\begin{lemma}
+Latus rectum of conic is given by
 \begin{align}
-\implies \frac{2b^2}{a} = 8
-\implies b^2 = 4a
+l=\norm{\beta(\vec{V}\vec{c}+\vec{u})^T}
+\end{align}
+And,
+length of latus rectum = 8 
+\begin{align}
+\implies\frac{2b^2}{a} = 8 \implies b^2 &= 4a
 \\
 \implies \frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_2} = 4\sqrt{\frac{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}{\lambda_1}} 
 \end{align}
@@ -173,10 +198,9 @@ Final equation is :
 \begin{align}
 \frac{\vec{y}^{\top}Dy}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f}=1\\
 \implies \frac{\vec{y}^{\top}\myvec{\lambda_1& 0 \\ 0 & \lambda_2}}{\vec{u}^{\top}\vec{V}^{-1}\vec{u}-f} =1\\
-\implies \vec{y}^{\top}\myvec{81& 0 \\ 0 & 36}=1
+\implies \vec{y}^{\top}\myvec{\frac{1}{81}& 0 \\ 0 & \frac{1}{36}}=1
 \end{align}
-
-
+\end{lemma}
 Plot of ellipse:
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
